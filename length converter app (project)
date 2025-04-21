@@ -1,0 +1,27 @@
+import tkinter as tk
+
+def convert_to_cm():
+    try:
+        inches = float(entry.get())
+        cm = inches * 2.54
+        result_label.config(text="That is " + str(round(cm, 2)) + " cm")
+    except:
+        result_label.config(text="Please type a number")
+
+root = tk.Tk()
+root.title("Inches to Centimeters")
+root.geometry("300x200")
+
+label = tk.Label(root, text="Type length in inches:")
+label.pack(pady=10)
+
+entry = tk.Entry(root)
+entry.pack(pady=5)
+
+button = tk.Button(root, text="Convert", command=convert_to_cm)
+button.pack(pady=10)
+
+result_label = tk.Label(root, text="")
+result_label.pack(pady=10)
+
+root.mainloop()
