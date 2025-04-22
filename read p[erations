@@ -1,0 +1,12 @@
+file=open('C:/Users/shaur/OneDrive/Desktop/Python Activities/read p[erations', 'r')
+print(file.read())
+file.close()
+
+file=open('C:/Users/shaur/OneDrive/Desktop/Python Activities/read p[erations', 'r')
+print("Read in parts")
+print(file.read(8))
+file.close()
+
+file=open('C:/Users/shaur/OneDrive/Desktop/Python Activities/read p[erations', 'a')
+file.write("im penguine and am 1 year old")
+file.close()

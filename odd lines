@@ -1,0 +1,13 @@
+fn = open('C:/Users/shaur/OneDrive/Desktop/Python Activities/odd lines', 'r')
+fn1 = open('C:/Users/shaur/OneDrive/Desktop/Python Activities/odd lines', 'r')
+cont = fn.readlines()
+type(cont)
+for i in range(1, len(cont[i-1]):
+               else:
+                    pass
+fn1.close()
+fn1.open('C:/Users/shaur/OneDrive/Desktop/Python Activities/odd lines'.'r')
+cont1 = fn1.read()
+print(cont1)
+fn.close()
+fn1.close()

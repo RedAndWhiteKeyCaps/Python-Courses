@@ -1,0 +1,9 @@
+file1 =open('C:/Users/shaur/OneDrive/Desktop/Python Activities/remove lines', 'r')
+file2 =open('C:/Users/shaur/OneDrive/Desktop/Python Activities/remove lines', 'w')
+
+for line in file1.readlines():
+    if not (line.startwith('coding')):
+        print(line)
+        file2.write(line)
+file2.close()
+file1.close()
