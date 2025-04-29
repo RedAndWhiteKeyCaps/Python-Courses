@@ -1,0 +1,13 @@
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+arr_plus_2 = arr + 2
+arr_sum = np.sum(arr)
+arr_slice = arr[1:4]
+arr_reshaped = arr.reshape(5, 1)
+
+print(arr_plus_2)
+print(arr_sum)
+print(arr_slice)
+print(arr_reshaped)
