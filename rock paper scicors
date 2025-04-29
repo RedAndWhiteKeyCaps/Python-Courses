@@ -1,0 +1,37 @@
+import tkinter as tk
+import random
+
+def play(user_choice):
+    options = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(options)
+    
+    if user_choice == computer_choice:
+        result = "Tie!"
+    elif (user_choice == "Rock" and computer_choice == "Scissors") or \
+         (user_choice == "Paper" and computer_choice == "Rock") or \
+         (user_choice == "Scissors" and computer_choice == "Paper"):
+        result = "You Win!"
+    else:
+        result = "You Lose!"
+    
+    result_label.config(text="Computer chose: " + computer_choice + "\n" + result)
+
+window = tk.Tk()
+window.title("Rock Paper Scissors")
+window.geometry("300x250")
+
+title = tk.Label(window, text="Pick one:", font=("Arial", 14))
+title.pack(pady=10)
+
+rock = tk.Button(window, text="Rock", width=12, command=lambda: play("Rock"))
+paper = tk.Button(window, text="Paper", width=12, command=lambda: play("Paper"))
+scissors = tk.Button(window, text="Scissors", width=12, command=lambda: play("Scissors"))
+
+rock.pack(pady=5)
+paper.pack(pady=5)
+scissors.pack(pady=5)
+
+result_label = tk.Label(window, text="", font=("Arial", 12))
+result_label.pack(pady=20)
+
+window.mainloop()

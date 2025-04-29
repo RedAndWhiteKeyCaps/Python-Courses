@@ -1,0 +1,29 @@
+file = open("example.txt", "r")
+text = file.read()
+print("Way 1 - read()")
+print(text)
+file.close()
+print()
+
+file = open("example.txt", "r")
+print("Way 2 - readline()")
+line = file.readline()
+while line:
+    print(line.strip())
+    line = file.readline()
+file.close()
+print()
+
+file = open("example.txt", "r")
+print("Way 3 - readlines()")
+lines = file.readlines()
+for line in lines:
+    print(line.strip())
+file.close()
+print()
+
+file = open("example.txt", "r")
+print("Way 4 - for line in file")
+for line in file:
+    print(line.strip())
+file.close()

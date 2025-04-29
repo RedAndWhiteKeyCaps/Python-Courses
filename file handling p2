@@ -1,0 +1,49 @@
+file = open("demo.txt", "w")
+file.write("Hello World!\nThis is a test file.\nLet's count characters, words, and lines.\n")
+file.close()
+
+file = open("demo.txt", "r")
+text = file.read()
+file.close()
+
+print("Number of characters:", len(text))
+
+words = text.split()
+print("Number of words:", len(words))
+
+file = open("demo.txt", "r")
+lines = file.readlines()
+file.close()
+print("Number of lines:", len(lines))
+
+reversed_text = text[::-1]
+print("Reversed text:")
+print(reversed_text)
+
+uppercase_text = text.upper()
+print("Text in uppercase:")
+print(uppercase_text)
+
+file = open("demo.txt", "a")
+file.write("\nThis is additional content added using append mode.\n")
+file.close()
+
+file = open("demo.txt", "r")
+new_content = file.read()
+file.close()
+print("Content after appending:")
+print(new_content)
+
+file = open("demo.txt", "r+")
+content = file.read()
+print("Original content in r+ mode:")
+print(content)
+file.seek(0)
+file.write("Updated the start of the file with r+ mode.\n")
+file.close()
+
+file = open("demo.txt", "r")
+final_content = file.read()
+file.close()
+print("Final content after update:")
+print(final_content)
