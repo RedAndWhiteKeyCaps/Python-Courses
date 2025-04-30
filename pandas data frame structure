@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+
+exam_data = {'name': ['Rerun', 'Pedro', 'Cason', 'Patrick', 'Camron', 'Skylar', 'Kayley', 'Lisa', 'Loranzo', 'Elsa'],
+             'score': [12.5, 9, 16.5, np.nan, 8, 19, 1, 2.5, 4, 9.6],
+             'attempts': [1, 2, 3, 2, 3, 1, 1, 2, 1, 667677876965656],
+             'quality': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'no']}
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+df = pd.DataFrame(exam_data, index=labels)
+print("Summary of the basic information about this DatFrame and its data:")
+print(df.info())
