@@ -1,0 +1,30 @@
+import pandas as pd
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+    'Math': [88, 92, 95, 70, 85],
+    'Science': [90, 85, 78, 88, 92],
+    'English': [85, 87, 93, 75, 80]
+}
+
+df = pd.DataFrame(data)
+
+print("Original Student Data:")
+print(df)
+
+df['Average'] = (df['Math'] + df['Science'] + df['English']) / 3
+
+print("\nStudent Data with Averages:")
+print(df)
+
+sorted_df = df.sort_values(by='Average', ascending=False)
+print("\nStudents Sorted by Average Marks:")
+print(sorted_df)
+
+high_science = df[df['Science'] > 90]
+print("\nStudents Who Got More Than 90 in Science:")
+print(high_science)
+
+name_avg = df[['Name', 'Average']]
+print("\nNames and Their Average Marks:")
+print(name_avg)
